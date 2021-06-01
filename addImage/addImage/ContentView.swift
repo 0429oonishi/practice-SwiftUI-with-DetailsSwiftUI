@@ -25,7 +25,27 @@ struct ContentView: View {
                 )
         }
         
-      
+        Circle()
+            .foregroundColor(.red)
+            .frame(width: 300, height: 300)
+            .overlay(
+                Ellipse()
+                        .foregroundColor(.green)
+                        .frame(width: 300, height: 200)
+                    .overlay(
+                        Rectangle()
+                            .foregroundColor(.blue)
+                            .frame(width: 200, height: 100)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 30)
+                                    .foregroundColor(.pink)
+                                    .frame(width: 100, height: 50)
+                            )
+                    )
+            )
+        
+       
+        
     }
 }
 
