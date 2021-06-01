@@ -52,33 +52,47 @@ struct ContentView: View {
             .clipped()
         
         ZStack {
-            Ellipse()
-                .stroke(lineWidth: 3)
+            MyEllipse()
                 .foregroundColor(.red)
-                .frame(width: 100, height: 300)
-            Ellipse()
-                .stroke(lineWidth: 3)
+            MyEllipse()
                 .foregroundColor(.blue)
-                .frame(width: 100, height: 300)
                 .rotationEffect(.degrees(30), anchor: .bottom)
-            Ellipse()
-                .stroke(lineWidth: 3)
+            MyEllipse()
                 .foregroundColor(.green)
-                .frame(width: 100, height: 300)
                 .rotationEffect(.degrees(-30), anchor: .bottom)
-            Ellipse()
-                .stroke(lineWidth: 3)
+            MyEllipse()
                 .foregroundColor(.pink)
-                .frame(width: 100, height: 300)
-                            .rotationEffect(.degrees(60), anchor: .bottom)
-            Ellipse()
-                .stroke(lineWidth: 3)
+                .rotationEffect(.degrees(60), anchor: .bottom)
+            MyEllipse()
                 .foregroundColor(.orange)
-                .frame(width: 100, height: 300)
-                            .rotationEffect(.degrees(-60), anchor: .bottom)
+                .rotationEffect(.degrees(-60), anchor: .bottom)
             
         }
         
+        Circle()
+            .foregroundColor(.red)
+            .frame(width: 100, height: 100)
+            .position(x: 100, y: 100)
+        
+        Image("a")
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .frame(width: 300, height: 300)
+            .clipShape(Circle())
+            .shadow(radius: 20)
+            .rotation3DEffect(
+                .degrees(30),
+                axis: (x: 0.0, y: 1.0, z: 0.0)
+            )
+        
+    }
+}
+
+struct MyEllipse: View {
+    var body: some View {
+        Ellipse()
+            .stroke(lineWidth: 3)
+            .frame(width: 100, height: 300)
     }
 }
 
