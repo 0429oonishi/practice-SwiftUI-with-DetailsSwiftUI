@@ -44,7 +44,40 @@ struct ContentView: View {
                     )
             )
         
-       
+        Capsule()
+            .stroke(lineWidth: 4)
+            .foregroundColor(.red)
+            .frame(width: 300, height: 200)
+            .rotationEffect(.degrees(-45))
+            .clipped()
+        
+        ZStack {
+            Ellipse()
+                .stroke(lineWidth: 3)
+                .foregroundColor(.red)
+                .frame(width: 100, height: 300)
+            Ellipse()
+                .stroke(lineWidth: 3)
+                .foregroundColor(.blue)
+                .frame(width: 100, height: 300)
+                .rotationEffect(.degrees(30), anchor: .bottom)
+            Ellipse()
+                .stroke(lineWidth: 3)
+                .foregroundColor(.green)
+                .frame(width: 100, height: 300)
+                .rotationEffect(.degrees(-30), anchor: .bottom)
+            Ellipse()
+                .stroke(lineWidth: 3)
+                .foregroundColor(.pink)
+                .frame(width: 100, height: 300)
+                            .rotationEffect(.degrees(60), anchor: .bottom)
+            Ellipse()
+                .stroke(lineWidth: 3)
+                .foregroundColor(.orange)
+                .frame(width: 100, height: 300)
+                            .rotationEffect(.degrees(-60), anchor: .bottom)
+            
+        }
         
     }
 }
