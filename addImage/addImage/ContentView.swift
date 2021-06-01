@@ -9,8 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Image("a")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 200, height: 400)
+                .scaleEffect(1.4)
+                .offset(x: 30, y: 30)
+                .clipped()
+                .overlay(
+                    Text("ジラーチ")
+                        .font(.title)
+                        .foregroundColor(Color.black)
+                        .offset(x: 0, y: -50)
+                )
+        }
+        
+      
     }
 }
 
