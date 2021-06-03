@@ -43,6 +43,25 @@ struct ContentView2: View {
     }
 }
 
+let metros = ["銀座線",
+              "丸の内線",
+              "千代田線",
+              "東北線",
+              "副都心線",
+              "半蔵門線",
+              "日比谷線"]
+
+struct ContentView3: View {
+    var body: some View {
+        List(0 ..< metros.count) { item in
+            HStack {
+                Text("\(item)")
+                Text(metros[item])
+            }
+        }
+    }
+}
+
 struct Photo1: View {
     var body: some View {
         HStack {
@@ -71,5 +90,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
         ContentView2()
+        ContentView3()
     }
 }
