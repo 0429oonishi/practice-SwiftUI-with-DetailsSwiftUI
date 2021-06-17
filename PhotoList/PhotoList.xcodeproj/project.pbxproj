@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB2ECF0E267B2129007FA6FB /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2ECF0D267B2129007FA6FB /* PhotoDetailView.swift */; };
 		ABAFB6632674F2DB0095415F /* PhotoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAFB6622674F2DB0095415F /* PhotoListApp.swift */; };
 		ABAFB6652674F2DB0095415F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAFB6642674F2DB0095415F /* ContentView.swift */; };
 		ABAFB6672674F2E00095415F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAFB6662674F2E00095415F /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB2ECF0D267B2129007FA6FB /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
 		ABAFB65F2674F2DB0095415F /* PhotoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAFB6622674F2DB0095415F /* PhotoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListApp.swift; sourceTree = "<group>"; };
 		ABAFB6642674F2DB0095415F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,9 +60,10 @@
 			children = (
 				ABAFB6622674F2DB0095415F /* PhotoListApp.swift */,
 				ABAFB6642674F2DB0095415F /* ContentView.swift */,
-				ABAFB6662674F2E00095415F /* Assets.xcassets */,
 				ABAFB6712674F3360095415F /* PhotoData.swift */,
 				ABAFB6732674F4E40095415F /* RowView.swift */,
+				AB2ECF0D267B2129007FA6FB /* PhotoDetailView.swift */,
+				ABAFB6662674F2E00095415F /* Assets.xcassets */,
 				ABAFB66B2674F2E00095415F /* Info.plist */,
 				ABAFB6682674F2E00095415F /* Preview Content */,
 			);
@@ -147,6 +150,7 @@
 				ABAFB6652674F2DB0095415F /* ContentView.swift in Sources */,
 				ABAFB6632674F2DB0095415F /* PhotoListApp.swift in Sources */,
 				ABAFB6722674F3360095415F /* PhotoData.swift in Sources */,
+				AB2ECF0E267B2129007FA6FB /* PhotoDetailView.swift in Sources */,
 				ABAFB6742674F4E40095415F /* RowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
