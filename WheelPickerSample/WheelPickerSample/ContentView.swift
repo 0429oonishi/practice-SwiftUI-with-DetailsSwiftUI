@@ -34,8 +34,58 @@ struct ContentView: View {
     }
 }
 
+struct ContentView2: View {
+    @State private var selectedSize = 2
+    @State private var selectedColor = 0
+    let sizes = ["S", "M", "L", "XL", "XLL"]
+    let colors = ["red", "green", "blue"]
+    
+    var body: some View {
+        VStack {
+            HStack {
+                Picker(selection: $selectedSize,
+                       label: Text("Size")) {
+                    ForEach(0..<sizes.count) { index in
+                        Text(sizes[index])
+                    }
+                }
+                .frame(width: 150)
+                .padding(.horizontal, 10)
+                .clipped()
+
+                Picker(selection: $selectedColor,
+                       label: Text("Color")) {
+                    ForEach(0..<colors.count) { index in
+                        Text(colors[index])
+                    }
+                }
+                .frame(width: 150)
+                .padding(.horizontal, 10)
+                .clipped()
+                .onAppear {
+                    selectedColor = colors.count / 2
+                }
+            }
+            
+            HStack {
+                Text("size \(sizes[selectedSize])")
+                    .padding(40)
+                Text("color \(colors[selectedColor])")
+                    .padding(30)
+            }
+            .foregroundColor(.white)
+            .font(.title2)
+            .background(
+                RoundedRectangle(cornerRadius: 20)
+                    .frame(width: 340, height: 50)
+                    .foregroundColor(.green)
+            )
+        }
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView2()
     }
 }
