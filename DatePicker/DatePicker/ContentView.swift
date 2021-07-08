@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var theDate = Date()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        DatePicker(selection: $theDate,
+                   label: { Text("日時") })
+            .environment(\.locale, Locale(identifier: "ja_JP"))
+        .padding(50)
     }
 }
 
