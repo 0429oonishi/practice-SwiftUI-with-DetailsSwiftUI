@@ -30,11 +30,17 @@ struct ContentView: View {
         VStack {
             Text(dateFormat.string(from: theDate))
             Text(dateFormat2.string(from: theDate))
-        DatePicker(selection: $theDate,
-                   label: { EmptyView() })
+            DatePicker("日付",
+                       selection: $theDate,
+                       displayedComponents: .date)
             .environment(\.locale, Locale(identifier: "ja_JP"))
-            .frame(width: 2000, height: 40)
+            .frame(width: 200, height: 40)
             .padding(50)
+            
+            DatePicker("時刻",
+                       selection: $theDate,
+                       displayedComponents: .hourAndMinute)
+                .frame(width: 200, height: 40)
         }
     }
 }
